@@ -30,7 +30,7 @@ while True:
         ret, track_window = cv2.meanShift(dst, track_window, term_crit)
         # Draw the new rectangle on the image
         x, y, w, h = track_window
-        img2 = cv2.rectangle(frame, (x,y), (x+w,y+h), (0,0,255), 5)
+        img2 = cv2.rectangle(frame, (x,y), (x+w,y+h), (255,0,0), 3)
         cv2.imshow('img2',img2)
         k = cv2.waitKey(1) & 0xff
         if k == 27:
